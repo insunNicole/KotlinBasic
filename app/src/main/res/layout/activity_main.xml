@@ -10,9 +10,10 @@
 
 
     <Button
+        android:id="@+id/clickMeBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CLICK ME!!"/>
+        android:text="CLICK ME!!" />
 
 
 
