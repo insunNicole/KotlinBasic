@@ -27,6 +27,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "두번째 버튼도 클릭되었습니다.", Toast.LENGTH_SHORT).show()
         }
 
+        copyBtn.setOnClickListener {
+            // 에디트 텍스트에 입력된 내용을 받아와서 밑에 칸에 문구로 반영한다.
+            val inputMessage = inputMsg.text.toString()
 
+            // 복사하는 곳에 문구로 반영
+            resultMsg.text = inputMessage
+
+        }
     }
 }
