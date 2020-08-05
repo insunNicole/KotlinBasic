@@ -26,5 +26,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("버튼 눌림", "두번째 버튼 눌림!")
             Toast.makeText(this, "두번째 버튼도 클릭되었습니다.", Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }
