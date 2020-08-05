@@ -20,5 +20,9 @@ class MainActivity : AppCompatActivity() {
             // 중괄호 내부의 코드 => clickMeBtn이 눌리면 실행될 코드.
             Log.d("버튼 클릭", "버튼이 클릭되었습니다.")
         }
+
+        secondBtn.setOnClickListener {
+            Log.d("버튼 눌림", "두번째 버튼 눌림!")
+        }
     }
 }
