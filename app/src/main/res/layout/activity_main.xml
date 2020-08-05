@@ -39,13 +39,9 @@
         android:id="@+id/resultMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:gravity="center"
+        android:padding="10dp"
         android:text="입력한 내용이 복사될 자리" />
-
-
-
-
 
 
 </LinearLayout>
