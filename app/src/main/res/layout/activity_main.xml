@@ -21,6 +21,28 @@
         android:layout_height="wrap_content"
         android:text="CLICK ME!!" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="문장을 입력하세요"
+        android:singleLine="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="복사하기" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="입력한 내용이 복사될 자리" />
+
+
+
+
 
 
 </LinearLayout>
