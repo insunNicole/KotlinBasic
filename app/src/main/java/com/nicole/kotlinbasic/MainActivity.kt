@@ -29,10 +29,25 @@ class MainActivity : AppCompatActivity() {
 
         copyBtn.setOnClickListener {
             // 에디트 텍스트에 입력된 내용을 받아와서 밑에 칸에 문구로 반영한다.
+            // 그리고 코틀린에서 변수를 선언할 때 자료형은 선언하지 않는다.
+            // toString()을 사용하는 이유: 문자열을 받는 상황 외에, 예를 들어 숫자를 받는다거나 할 때,
+            // inputMsg.text.toInt() 이런식으로 바로 안되고 inputMsg.text.toString().toInt()
+            // 이런 형식으로 사용할 수 있다. 이런 저런 제약이 많아서 toString()으로 사용한다.
             val inputMessage = inputMsg.text.toString()
 
-            // 복사하는 곳에 문구로 반영
-            resultMsg.text = inputMessage
+//            입력한 내용이 5글자가 안된다면, 5자 이상 입력하라고 안내,
+//            5자 이상이라면 문구로 반영.
+            if (inputMessage.length < 5) {
+                Toast.makeText(this, "5글자 이상 입력하세요", Toast.LENGTH_SHORT).show()
+            }
+            // 5글자는 넘지만, 10글자가 안된다면 로그로 10글자가 안된다고 출력 그외 상황에서는 문구로 반영
+            else if (inputMessage.length < 10) {
+                Log.d("입력글자 수", "5글자 이상이면서 10글자 미만입니다. ")
+            } else {
+                // 복사하는 곳에 문구로 반영
+                resultMsg.text = inputMessage
+            }
+
 
         }
     }
